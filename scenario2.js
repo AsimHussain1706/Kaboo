@@ -12,16 +12,16 @@ describe('Kaboo registration page', function() {
 
     //Check that login button is  inactive
     var loginButton = element(by.css('button#submitLogin'));
-    expect(hasClass(loginButton, 'is-inactive')).toBe(true);
+    expect(kPO.isloginButtonInactive()).toBe(true);
 
     //Enter credentials
-    kpo.setUsername('autouk');
-    kpo.setPassword('Autotest1');
+    kPO.setUsername('autouk');
+    kPO.setPassword('Autotest1');
 
     //Check that login button is now active
-    expect(hasClass(kpo.loginButton, 'is-inactive')).toBe(false);
+      expect(kPO.isloginButtonInactive()).toBe(false);
     //Click login button
-    kpo.login();
+    kPO.login();
 
     expect(browser.getCurrentUrl()).toEqual('http://qatest.staging.kaboo.com/gb/profile');
 

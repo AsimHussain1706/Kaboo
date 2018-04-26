@@ -128,12 +128,12 @@ var KabooPageObject = function () {
         enterYourDetailsButton.click();
     };
 
-    this.setUsername = function (username) {
-      username.sendKeys(username);
+    this.setUsername = function (user) {
+      username.sendKeys(user);
     }
 
-    this.setPassword = function (password) {
-      password.sendKeys(password);
+    this.setPassword = function (pass) {
+      password.sendKeys(pass);
     }
 
     this.getCountryText = function() {
@@ -158,6 +158,10 @@ var KabooPageObject = function () {
 
     this.isEnterYourDetailsButtonInactive = function () {
         return hasClass(enterYourDetailsButton, 'is-inactive');
+    };
+
+    this.isloginButtonInactive = function () {
+        return hasClass(loginButton, 'is-inactive');
     };
 
     this.isEnterYourDetailsButtonDisabled = function () {
