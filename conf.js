@@ -1,5 +1,5 @@
 exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
 
-  specs: ['scenario1.js','scenario2.js']
+  specs: ['signupPage.test.js','loginPage.test.js']
 };
